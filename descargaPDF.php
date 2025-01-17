@@ -44,13 +44,10 @@ If ($resultado -> num_rows > 0){
 
     // Guardar el PDF en un archivo temporal
     $ruta_pdf = 'listado_tabla.pdf';
-    $ObjPdf->Output('F', $ruta_pdf);
+    $ObjPdf->Output('I', $ruta_pdf);
 
     // Mostrar el PDF en el navegador
-    echo '<iframe src="' . $ruta_pdf . '" width="100%" height="100%" style="border:none;"></iframe>'; // Incrusta el PDF en un iframe, sin bordes y ajustado al 100% del tamaño de la pantalla.
-
-
-} else {
+   
     echo "No se encontraron registros en la base de datos.";
 }
 
